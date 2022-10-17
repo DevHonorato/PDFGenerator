@@ -10,7 +10,7 @@ declare var html2pdf: () => any;
 })
 export class AppComponent {
   title = 'PDFGenerator';
-
+  viewer = false;
 
 
   async downloadTemplate(tipo: string){
@@ -85,5 +85,25 @@ export class AppComponent {
 
     return encoded;
 
+  }
+
+
+  viewerPDF(){
+    let template = document.getElementById('viewerPDF');
+
+    switch (this.viewer) {
+      case true:
+        template!.setAttribute("style", "display: none");
+        this.viewer = false;
+        break;
+      case false:
+        template!.setAttribute("style", "display: block");
+        this.viewer = true;
+        break;
+      default:
+        template!.setAttribute("style", "display: none");
+        this.viewer = false;
+        break;
+    }
   }
 }

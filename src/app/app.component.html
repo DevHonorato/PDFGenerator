@@ -1,14 +1,24 @@
-<div class="container text-center ">
+<div class="container text-center mb-5">
 
     <div class="m-3">
         <h3>PDF Generator</h3>
     </div>
 
-    <button type="button" class="btn btn-primary m-3" (click)="downloadTemplate('pdf')"> Template PDF </button>
+    <button type="button" class="btn btn-primary m-3" (click)="downloadTemplate('pdf')">
+      Template PDF
+    </button>
 
-    <button type="button" class="btn btn-primary m-3" (click)="downloadTemplate('base64')"> Base64 (valor no console) </button>
+    <button type="button" class="btn btn-primary m-3" (click)="downloadTemplate('base64')">
+      Base64 (valor no console)
+    </button>
 
-    <div style="display: none;">
+    <button type="button" class="btn btn-primary m-3" (click)="viewerPDF()">
+      Visualizar
+      <b *ngIf="viewer">-</b>
+      <b *ngIf="!viewer">+</b>
+    </button>
+
+    <div id="viewerPDF" style="display: none;">
         <app-pdftemplate></app-pdftemplate>
     </div>
 </div>
