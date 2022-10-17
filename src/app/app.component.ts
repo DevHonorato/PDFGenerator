@@ -34,7 +34,7 @@ export class AppComponent {
     var worker = html2pdf();
 
     var opt = {
-        margin: 15,
+        margin: 14,
         pagebreak: { mode: "avoid-all" },
         image: { type: "jpeg", quality: 1 },
         enableLinks: false,
