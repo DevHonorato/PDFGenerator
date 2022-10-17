@@ -1,0 +1,22 @@
+.container {
+    padding-top: 30px;
+}
+
+.invoice-body {
+    background-color: transparent;
+}
+
+.invoice-thank {
+    margin-top: 60px;
+    padding: 5px;
+}
+
+address {
+    margin: 15px;
+    text-align: left;
+}
+
+.invoice-head {
+    margin: 15px 0px;
+    text-align: end;
+}

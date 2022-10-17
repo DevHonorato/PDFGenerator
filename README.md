@@ -13,7 +13,6 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Installation
 
-
 npm install jspdf@1.3.4 --save 
 
 npm install html2pdf.js@0.9.3 --save 
