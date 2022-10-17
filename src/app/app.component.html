@@ -1,0 +1,14 @@
+<div class="container text-center ">
+
+    <div class="m-3">
+        <h3>PDF Generator</h3>
+    </div>
+
+    <button type="button" class="btn btn-primary m-3" (click)="downloadTemplate('pdf')"> Template PDF </button>
+
+    <button type="button" class="btn btn-primary m-3" (click)="downloadTemplate('base64')"> Base64 (valor no console) </button>
+
+    <div style="display: none;">
+        <app-pdftemplate></app-pdftemplate>
+    </div>
+</div>
