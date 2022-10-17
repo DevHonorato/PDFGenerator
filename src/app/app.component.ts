@@ -13,7 +13,7 @@ export class AppComponent {
   viewer = false;
 
 
-  async downloadTemplate(tipo: string){
+  async downloadTemplate(tipo: string) {
 
     switch (tipo) {
       case 'pdf':
@@ -34,48 +34,48 @@ export class AppComponent {
     var worker = html2pdf();
 
     var opt = {
-        margin: 14,
-        pagebreak: { mode: "avoid-all" },
-        image: { type: "jpeg", quality: 1 },
-        enableLinks: false,
-        html2canvas: {
-            useCORS: true,
-            letterRendering: true,
-            scale: 2
-        }
+      margin: 14,
+      pagebreak: { mode: "avoid-all" },
+      image: { type: "jpeg", quality: 1 },
+      enableLinks: false,
+      html2canvas: {
+        useCORS: true,
+        letterRendering: true,
+        scale: 2
+      }
     }
 
     var timeInMs = new Date().toLocaleString();
 
-    await worker.set(opt).from(document.getElementById(elementId)).toPdf().get('pdf').then(function(pdf: any) {
+    await worker.set(opt).from(document.getElementById(elementId)).toPdf().get('pdf').then(function (pdf: any) {
       var totalPages = pdf.internal.getNumberOfPages();
       for (var i = 1; i <= totalPages; i++) {
-          pdf.setPage(i);
-          pdf.setFontSize(8);
-          pdf.setTextColor(0);
-          pdf.text('Página ' + i + ' de ' + totalPages, (pdf.internal.pageSize.getWidth() / 1.172), (pdf.internal.pageSize.getHeight() - 8));
-          pdf.text(timeInMs, (pdf.internal.pageSize.getWidth() / 15.12), (pdf.internal.pageSize.getHeight() - 8));
-          // console.log("pdf.internal.pageSize.getWidth()",pdf.internal.pageSize.getWidth())
-          // console.log("pdf.internal.pageSize.getHeight()",pdf.internal.pageSize.getHeight())
+        pdf.setPage(i);
+        pdf.setFontSize(8);
+        pdf.setTextColor(0);
+        pdf.text('Página ' + i + ' de ' + totalPages, (pdf.internal.pageSize.getWidth() / 1.172), (pdf.internal.pageSize.getHeight() - 8));
+        pdf.text(timeInMs, (pdf.internal.pageSize.getWidth() / 15.12), (pdf.internal.pageSize.getHeight() - 8));
+        // console.log("pdf.internal.pageSize.getWidth()",pdf.internal.pageSize.getWidth())
+        // console.log("pdf.internal.pageSize.getHeight()",pdf.internal.pageSize.getHeight())
       }
-    }).save(nomePDF+".pdf");
+    }).save(nomePDF + ".pdf");
 
   }
 
-  async f_geraBase64(elementId: any){
+  async f_geraBase64(elementId: any) {
 
     var worker = html2pdf();
 
     var opt = {
-        margin: 14,
-        pagebreak: { mode: "avoid-all" },
-        image: { type: "jpeg", quality: 1 },
-        enableLinks: false,
-        html2canvas: {
-            useCORS: true,
-            letterRendering: true,
-            scale: 2
-        }
+      margin: 14,
+      pagebreak: { mode: "avoid-all" },
+      image: { type: "jpeg", quality: 1 },
+      enableLinks: false,
+      html2canvas: {
+        useCORS: true,
+        letterRendering: true,
+        scale: 2
+      }
     }
 
     let jsonPdf = await worker.set(opt).from(document.getElementById(elementId)).outputPdf();
@@ -88,7 +88,7 @@ export class AppComponent {
   }
 
 
-  viewerPDF(){
+  viewerPDF() {
     let template = document.getElementById('viewerPDF');
 
     switch (this.viewer) {
