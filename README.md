@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
  - [jspdf](https://www.npmjs.com/package/jspdf/v/1.3.4) version `1.3.4`
  - [jspdf-Documentation](https://artskydj.github.io/jsPDF/docs/jsPDF.html)
- - [html2pdf](https://www.npmjs.com/package/html2pdf.js/v/0.9.0) version `0.9.0`
+ - [html2pdf](https://www.npmjs.com/package/html2pdf.js/v/0.9.3) version `0.9.3`
  
  CDN Tem que manter a mesma versão `0.9.3`
  `https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js`
