@@ -42,7 +42,8 @@ export class AppComponent {
         useCORS: true,
         letterRendering: true,
         scale: 2
-      }
+      },
+      jsPDF: { orientation: 'portrait' }
     }
 
     var timeInMs = new Date().toLocaleString();
@@ -75,7 +76,8 @@ export class AppComponent {
         useCORS: true,
         letterRendering: true,
         scale: 2
-      }
+      },
+      jsPDF: { orientation: 'portrait' }
     }
 
     let jsonPdf = await worker.set(opt).from(document.getElementById(elementId)).outputPdf();
