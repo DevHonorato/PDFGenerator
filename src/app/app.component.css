@@ -1,0 +1,69 @@
+.c-100{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+}
+
+.title-box{
+  display: flex;
+    flex-direction: column;
+    background: #171b22;
+    border: 1px solid #31363d;
+    justify-content: center;
+    color: #fff;
+    margin: 25px 0;
+    border-radius: 10px;
+    padding: 25px 20px;
+    box-shadow: 4px 4px 8px #080c10;
+}
+
+.box-buttons{
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.btn-primary {
+  background: linear-gradient(65deg,#07f,#3f51b5)!important;
+  margin-bottom: 5px;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(-65deg,#07f,#3f51b5)!important;
+}
+
+
+
+#viewerPDF{
+  margin: 0 0 25px;
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  background: #171b22;
+  border: 1px solid #31363d;
+  justify-content: center;
+  color: #fff;
+  margin: 0 0 25px;
+  border-radius: 10px;
+  padding: 25px 0 20px;
+  align-items: center;
+  box-shadow: 4px 4px 8px #080c10;
+}
+
+.a-footer-info {
+  padding: 0;
+  margin: 0;
+  color: #c7c7c7;
+  font-size: 15px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 110px;
+}

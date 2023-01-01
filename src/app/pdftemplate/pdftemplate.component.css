@@ -20,3 +20,7 @@ address {
     margin: 15px 0px;
     text-align: end;
 }
+
+.templatePDF{
+  background: #fff; padding: 25px; border-radius: 10px; box-shadow: 4px 4px 8px #080c10;
+}

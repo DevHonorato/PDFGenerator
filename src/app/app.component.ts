@@ -11,9 +11,11 @@ declare var html2pdf: () => any;
 export class AppComponent {
   title = 'PDFGenerator';
   viewer = false;
+  _orientation = "portrait";
 
+  async downloadTemplate(tipo: string, orientationPDF: string) {
 
-  async downloadTemplate(tipo: string) {
+    this._orientation = orientationPDF;
 
     switch (tipo) {
       case 'pdf':
@@ -43,7 +45,7 @@ export class AppComponent {
         letterRendering: true,
         scale: 2
       },
-      jsPDF: { orientation: 'portrait' }
+      jsPDF: { orientation: this._orientation }
     }
 
     var timeInMs = new Date().toLocaleString();
@@ -77,7 +79,7 @@ export class AppComponent {
         letterRendering: true,
         scale: 2
       },
-      jsPDF: { orientation: 'portrait' }
+      jsPDF: { orientation: this._orientation }
     }
 
     let jsonPdf = await worker.set(opt).from(document.getElementById(elementId)).outputPdf();
